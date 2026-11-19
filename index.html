@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kit Alternance Grand Sud</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Le kit alternance de Grand Sud Formation : jobboards, modèles de CV et de lettre, prospection, offres de nos partenaires.">
+<link rel="icon" href="logo_corail.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Mise en page : bandeau corail + menu latéral fixe à gauche (repliable sur téléphone), contenu en colonne de lecture ~68ch.
+   Motif : les deux carrés décalés du logo Grand Sud. */
+:root{
+  --corail:#DB4A39; --corail-fonce:#B83A2B; --corail-pale:#FBEAE7;
+  --encre:#2B2B2B; --texte:#3A3533; --discret:#6E6461;
+  --fond:#FFFFFF; --fond-doux:#F8F5F4; --trait:#E9E1DF;
+  --vert:#2F7D46; --vert-pale:#E5F3E9; --bleu:#2F6E9E; --bleu-pale:#E4EFF7; --gris-pale:#EFEDEC;
+  --titre:"Montserrat",Arial,Helvetica,sans-serif;
+  --corps:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --corail:#EE6B5A; --corail-fonce:#F28A7C; --corail-pale:#3A2421;
+  --encre:#F4EFEE; --texte:#DCD5D3; --discret:#A89D9A;
+  --fond:#1B1817; --fond-doux:#242020; --trait:#3A3331;
+  --vert:#6CC48A; --vert-pale:#1F3326; --bleu:#7DB3DE; --bleu-pale:#1C2B38; --gris-pale:#2E2A29;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --corail:#EE6B5A; --corail-fonce:#F28A7C; --corail-pale:#3A2421;
+  --encre:#F4EFEE; --texte:#DCD5D3; --discret:#A89D9A;
+  --fond:#1B1817; --fond-doux:#242020; --trait:#3A3331;
+  --vert:#6CC48A; --vert-pale:#1F3326; --bleu:#7DB3DE; --bleu-pale:#1C2B38; --gris-pale:#2E2A29;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--fond);color:var(--texte);font-family:var(--corps);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#DB4A39}
+img{max-width:100%}
+a{color:var(--corail-fonce)}
+:focus-visible{outline:3px solid var(--corail);outline-offset:2px;border-radius:3px}
+
+/* Bandeau */
+.bandeau{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#DB4A39;color:#fff}
+.bandeau-in{display:flex;align-items:center;gap:14px;padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bandeau img{height:46px;width:auto}
+.bandeau .nom{font-family:var(--titre);font-weight:800;font-size:1.05rem;letter-spacing:.01em;line-height:1.15}
+.bandeau .nom small{display:block;font-weight:500;font-size:.78rem;opacity:.9;letter-spacing:.06em;text-transform:uppercase}
+.bandeau a.marque{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.bouton-menu{margin-left:auto;display:none;background:transparent;border:2px solid #fff;color:#fff;font:600 .9rem var(--titre);padding:7px 12px;border-radius:6px;cursor:pointer}
+
+/* Structure */
+.cadre{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:calc(100vh - 66px);background:linear-gradient(to right,var(--fond-doux) 279px,var(--trait) 279px,var(--trait) 280px,var(--fond) 280px)}
+.page-offres .page,.page-offres footer{max-width:1080px}
+nav.menu{background:var(--fond-doux);padding:22px 14px 40px max(14px,env(safe-area-inset-left,0px));position:sticky;top:calc(66px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 66px - env(safe-area-inset-top,0px));overflow:auto}
+nav.menu .groupe{font-family:var(--titre);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--discret);margin:20px 10px 6px}
+nav.menu a{display:block;padding:8px 10px;border-radius:6px;color:var(--texte);text-decoration:none;font-size:.95rem;line-height:1.35}
+nav.menu a:hover{background:var(--corail-pale);color:var(--encre)}
+nav.menu a[aria-current="page"]{background:var(--corail);color:#fff;font-weight:600}
+main{min-width:0;padding-block:36px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.page{max-width:72ch;margin:0 auto}
+
+/* Typographie */
+.page h1{font-family:var(--titre);font-weight:800;color:var(--encre);font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin:0 0 .5em;text-wrap:balance;position:relative;padding-top:34px}
+.page h1::before,.page h1::after{content:"";position:absolute;top:0;width:22px;height:22px}
+.page h1::before{left:10px;background:var(--corail)}
+.page h1::after{left:0;top:8px;border:2px solid var(--corail);background:var(--fond)}
+.page h1 + p{font-size:1.08rem;color:var(--discret)}
+.page h2{font-family:var(--titre);font-weight:700;color:var(--encre);font-size:1.45rem;line-height:1.25;margin:2.2em 0 .6em;padding-bottom:.35em;border-bottom:2px solid var(--corail);text-wrap:balance;scroll-margin-top:90px}
+.page h3{font-family:var(--titre);font-weight:700;color:var(--corail-fonce);font-size:1.1rem;margin:1.8em 0 .4em;text-wrap:balance;scroll-margin-top:90px}
+.page p{margin:.7em 0}
+.page ul,.page ol{padding-left:1.3em;margin:.6em 0}
+.page li{margin:.3em 0}
+.page li::marker{color:var(--corail)}
+.page strong{color:var(--encre)}
+.page hr{border:0;height:0;margin:2.2em 0;border-top:1px dashed var(--trait)}
+
+/* Encadrés (citations Markdown "> ") */
+.page blockquote{margin:1.4em 0;padding:14px 18px;background:var(--corail-pale);border-radius:8px;color:var(--encre)}
+.page blockquote p{margin:.2em 0}
+
+/* Listes de compétences en deux colonnes */
+.page-competences .page ul{columns:2;column-gap:28px}
+.page-competences .page li{break-inside:avoid}
+@media (max-width:560px){.page-competences .page ul{columns:1}}
+
+/* Cases à cocher */
+.page li.tache{list-style:none;margin-left:-1.3em;display:flex;gap:10px;align-items:flex-start}
+.page li.tache input{width:20px;height:20px;margin-top:3px;accent-color:var(--corail);flex:none;cursor:pointer}
+.page li.tache.fait span{color:var(--discret);text-decoration:line-through}
+
+/* Tableaux */
+.tableau{overflow-x:auto;margin:1.2em 0;border:1px solid var(--trait);border-radius:8px}
+.page table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:560px}
+.page th{font-family:var(--titre);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;text-align:left;color:var(--discret);background:var(--fond-doux);padding:10px 12px;border-bottom:1px solid var(--trait)}
+.page td{padding:10px 12px;border-bottom:1px solid var(--trait);vertical-align:top}
+.page tr:last-child td{border-bottom:0}
+.page td:first-child{font-weight:600;color:var(--encre)}
+.pastille{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.8rem;font-weight:600;white-space:nowrap}
+.pastille.ouvert{background:var(--vert-pale);color:var(--vert)}
+.pastille.examen{background:var(--bleu-pale);color:var(--bleu)}
+.pastille.pourvu{background:var(--gris-pale);color:var(--discret)}
+
+/* Téléchargements */
+a.fichier{display:inline-flex;align-items:center;gap:10px;margin:.4em 0;padding:10px 16px;border:2px solid var(--corail);border-radius:8px;text-decoration:none;font-weight:600;color:var(--corail-fonce);background:var(--fond)}
+a.fichier:hover{background:var(--corail);color:#fff}
+a.fichier::before{content:"";width:14px;height:16px;flex:none;background:currentColor;clip-path:polygon(0 0,68% 0,100% 28%,100% 100%,0 100%)}
+a.fichier.absent{border-style:dashed;border-color:var(--trait);color:var(--discret);pointer-events:none}
+a.fichier.absent::after{content:"bientôt disponible";font-weight:500;font-size:.8rem}
+
+/* Prompts */
+.prompt{position:relative;margin:1em 0}
+.page pre{background:var(--fond-doux);border:1px solid var(--trait);border-radius:8px;padding:16px 18px;overflow-x:auto;font-family:var(--mono);font-size:.86rem;line-height:1.55;white-space:pre-wrap;color:var(--encre)}
+.copier{position:absolute;top:8px;right:8px;font:600 .8rem var(--titre);background:var(--corail);color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}
+
+/* Sommaire de l'accueil */
+.sommaire{display:flex;flex-wrap:wrap;gap:8px;margin:1.4em 0 0}
+.sommaire a{font-size:.85rem;font-weight:600;text-decoration:none;color:var(--encre);background:var(--fond-doux);border:1px solid var(--trait);padding:6px 12px;border-radius:999px}
+.sommaire a:hover{border-color:var(--corail);color:var(--corail-fonce)}
+
+.etat{color:var(--discret);padding:40px 0}
+footer{max-width:72ch;margin:60px auto 0;padding-top:16px;border-top:1px solid var(--trait);font-size:.82rem;color:var(--discret)}
+
+@media (max-width:860px){
+  .bouton-menu{display:block}
+  .cadre{grid-template-columns:minmax(0,1fr);background:var(--fond)}
+  nav.menu{position:fixed;top:calc(66px + env(safe-area-inset-top,0px));left:0;right:0;bottom:0;max-height:none;z-index:15;border-right:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+  nav.menu:not(.ouvert){display:none}
+  main{padding-block:24px 60px}
+}
+@media (prefers-reduced-motion:no-preference){ .page{animation:apparition .25s ease-out} @keyframes apparition{from{transform:translateY(6px)}to{transform:none}} }
+</style>
+</head>
+<body>
+<header class="bandeau">
+  <div class="bandeau-in">
+    <a class="marque" href="#accueil">
+      <img src="logo_blanc.png" alt="Grand Sud Management & Tourism School">
+      <span class="nom">Ton Kit Alternance<small>by Grand Sud Formation</small></span>
+    </a>
+    <button class="bouton-menu" id="bouton-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+<div class="cadre">
+  <nav class="menu" id="menu" aria-label="Pages du kit"></nav>
+  <main>
+    <article class="page" id="page"><p class="etat">Chargement…</p></article>
+    <footer>Grand Sud Formation · Kit alternance 2026-2027</footer>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script>
+/* Le contenu du site est dans le dossier "contenu" (fichiers .md).
+   Ce script n'a pas besoin d'être modifié pour changer le texte. */
+(function(){
+  var DOSSIER = "contenu/";
+  var ACCUEIL = "accueil";
+  var menu = document.getElementById("menu");
+  var page = document.getElementById("page");
+  var boutonMenu = document.getElementById("bouton-menu");
+  var pages = [];
+
+  marked.setOptions({ gfm:true, breaks:true });
+
+  function lire(nom){
+    return fetch(DOSSIER + nom + ".md", {cache:"no-cache"}).then(function(r){
+      if(!r.ok) throw new Error(r.status);
+      return r.text();
+    });
+  }
+  function sansCommentaires(t){ return t.replace(/<!--[\s\S]*?-->/g, ""); }
+  function slug(t){
+    return t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  }
+  function memo(cle, val){
+    try{ if(val===undefined) return localStorage.getItem(cle); localStorage.setItem(cle, val); }catch(e){ return null; }
+  }
+
+  function construireMenu(texte){
+    var html = "";
+    sansCommentaires(texte).split("\n").forEach(function(l){
+      l = l.trim();
+      var g = l.match(/^##\s+(.+)/);
+      var p = l.match(/^-\s*\[(.+?)\]\((.+?)\)/);
+      if(g) html += '<div class="groupe">' + g[1] + '</div>';
+      else if(p){ pages.push(p[2]); html += '<a href="#' + p[2] + '" data-page="' + p[2] + '">' + p[1] + '</a>'; }
+    });
+    menu.innerHTML = html;
+  }
+
+  function embellir(nom){
+    var racine = page;
+    // Liens externes dans un nouvel onglet ; fichiers à télécharger en bouton
+    racine.querySelectorAll("a[href]").forEach(function(a){
+      var h = a.getAttribute("href");
+      if(/^https?:/.test(h)){ a.target = "_blank"; a.rel = "noopener"; }
+      if(/^fichiers\//.test(h)){
+        a.classList.add("fichier");
+        var p = a.parentElement;
+        if(p && p.tagName==="P" && p.childNodes.length===1) p.style.margin = ".5em 0";
+        fetch(h, {method:"HEAD", cache:"no-cache"}).then(function(r){ if(!r.ok) a.classList.add("absent"); }).catch(function(){ a.classList.add("absent"); });
+      }
+    });
+    // Tableaux défilants + pastilles d'état
+    racine.querySelectorAll("table").forEach(function(t){
+      var w = document.createElement("div"); w.className = "tableau";
+      t.parentNode.insertBefore(w, t); w.appendChild(t);
+      var col = -1;
+      t.querySelectorAll("th").forEach(function(th,i){ if(/^état$/i.test(th.textContent.trim())) col = i; });
+      if(col>=0) t.querySelectorAll("tbody tr").forEach(function(tr){
+        var td = tr.children[col]; if(!td) return;
+        var v = td.textContent.trim(); if(!v) return;
+        var c = /ouvert/i.test(v) ? "ouvert" : /examen|cours/i.test(v) ? "examen" : /pourvu|ferm/i.test(v) ? "pourvu" : "";
+        td.innerHTML = '<span class="pastille ' + c + '">' + v + '</span>';
+      });
+    });
+    // Cases à cocher mémorisées sur l'appareil de l'étudiant
+    racine.querySelectorAll('li input[type="checkbox"]').forEach(function(cb, i){
+      var li = cb.closest("li"); li.classList.add("tache");
+      var reste = document.createElement("span");
+      while(cb.nextSibling) reste.appendChild(cb.nextSibling);
+      li.appendChild(reste);
+      var cle = "kit-" + nom + "-" + i;
+      cb.disabled = false; cb.checked = memo(cle) === "1";
+      li.classList.toggle("fait", cb.checked);
+      cb.addEventListener("change", function(){ memo(cle, cb.checked ? "1" : "0"); li.classList.toggle("fait", cb.checked); });
+    });
+    // Bouton copier sur les prompts
+    racine.querySelectorAll("pre").forEach(function(pre){
+      var w = document.createElement("div"); w.className = "prompt";
+      pre.parentNode.insertBefore(w, pre); w.appendChild(pre);
+      var b = document.createElement("button"); b.className = "copier"; b.type = "button"; b.textContent = "Copier";
+      b.addEventListener("click", function(){
+        var txt = pre.innerText;
+        var ok = function(){ b.textContent = "Copié"; setTimeout(function(){ b.textContent = "Copier"; }, 1800); };
+        var secours = function(){ var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Texte sélectionné"; };
+        try{ navigator.clipboard.writeText(txt).then(ok, secours); }catch(e){ secours(); }
+      });
+      w.appendChild(b);
+    });
+    // Ancres sur les titres + sommaire pour les pages longues
+    var h2 = racine.querySelectorAll("h2");
+    h2.forEach(function(h){ h.id = slug(h.textContent); });
+    racine.querySelectorAll("h3").forEach(function(h){ h.id = slug(h.textContent); });
+    if(h2.length >= 5){
+      var nav = document.createElement("div"); nav.className = "sommaire";
+      h2.forEach(function(h){
+        var a = document.createElement("a"); a.href = "#" + nom; a.textContent = h.textContent.replace(/^[^\wÀ-ÿ]+/,"");
+        a.addEventListener("click", function(e){ e.preventDefault(); h.scrollIntoView({behavior:"smooth", block:"start"}); });
+        nav.appendChild(a);
+      });
+      var intro = racine.querySelector("h1 + p") || racine.querySelector("h1");
+      intro.after(nav);
+    }
+  }
+
+  function afficher(){
+    var nom = (location.hash || "").replace(/^#/, "") || ACCUEIL;
+    if(pages.length && pages.indexOf(nom) < 0) nom = ACCUEIL;
+    menu.querySelectorAll("a").forEach(function(a){
+      if(a.dataset.page === nom) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+    });
+    document.body.className = "page-" + nom;
+    menu.classList.remove("ouvert"); boutonMenu.setAttribute("aria-expanded","false");
+    lire(nom).then(function(md){
+      page.innerHTML = marked.parse(sansCommentaires(md));
+      embellir(nom);
+      var t = page.querySelector("h1");
+      document.title = (t && nom !== ACCUEIL ? t.textContent + " · " : "") + "Kit Alternance Grand Sud";
+      window.scrollTo(0,0);
+    }).catch(function(){
+      page.innerHTML = '<h1>Page introuvable</h1><p>Le fichier « ' + DOSSIER + nom + '.md » est introuvable. Vérifiez qu\'il existe dans le dossier « contenu » et que son nom correspond au menu.</p>';
+    });
+  }
+
+  boutonMenu.addEventListener("click", function(){
+    var o = menu.classList.toggle("ouvert");
+    boutonMenu.setAttribute("aria-expanded", o ? "true" : "false");
+  });
+
+  lire("menu").then(construireMenu).catch(function(){}).then(function(){
+    afficher();
+    window.addEventListener("hashchange", afficher);
+  });
+})();
+</script>
+</body>
+</html>
