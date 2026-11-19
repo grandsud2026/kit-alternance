@@ -1,6 +1,6 @@
 # Kit Alternance - Grand Sud Formation
 
-Site du kit alternance des étudiants de Grand Sud Formation.
+Site du kit alternance des étudiants de Grand Sud Formation : https://grandsud2026.github.io/kit-alternance/
 
 - Le texte de chaque page est dans le dossier `contenu` (un fichier `.md` par page).
 - Les documents à télécharger vont dans le dossier `fichiers`.
