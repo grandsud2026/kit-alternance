@@ -3,7 +3,7 @@
 Tout ce qu'il te faut pour décrocher ton alternance : les sites d'offres, les modèles de CV et de lettre, la méthode de prospection et les contacts de l'école.
 
 > **Ton contact école**
-> CHARLOT Vincent · 07 67 91 23 19 · vincent.charlot@grand-sud.fr
+> FUNCK Molly · 07 67 91 23 19 · molly.funck@grand-sud.fr
 > ou ROS Paola · 06 51 53 82 29 · paola.ros@grand-sud.fr
 
 Avant de commencer, lis la page [Contrat en alternance, droits et devoirs](#contrat).
