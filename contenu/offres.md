@@ -12,12 +12,12 @@
 
 ## Offres de la semaine
 
-| Entreprise | Lieu | État |
+| Type de structure | Lieu | État |
 |---|---|---|
-| Ibis Budget Cahors | Cahors | Ouvert aux candidatures |
-| Restaurant Le 103 | | Ouvert aux candidatures |
-| Hôtel Brit à Brive | Brive | Ouvert aux candidatures |
-| La Clé des Pyrénées | Saint-Lary-Soulan | Ouvert aux candidatures |
+| Hôtel | Cahors | Ouvert aux candidatures |
+| Restaurant | | Ouvert aux candidatures |
+| Hôtel | Brive-la-Gaillarde | Ouvert aux candidatures |
+| Hébergement touristique | Saint-Lary-Soulan | Ouvert aux candidatures |
 
 > **Une offre correspond à tes compétences et le pôle entreprise ne t'a pas encore contacté ?**
 > FUNCK Molly · 07 67 91 23 19 · molly.funck@grand-sud.fr
