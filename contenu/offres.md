@@ -20,5 +20,5 @@
 | La Clé des Pyrénées | Saint-Lary-Soulan | Ouvert aux candidatures |
 
 > **Une offre correspond à tes compétences et le pôle entreprise ne t'a pas encore contacté ?**
-> CHARLOT Vincent · 07 67 91 23 19 · vincent.charlot@grand-sud.fr
+> FUNCK Molly · 07 67 91 23 19 · molly.funck@grand-sud.fr
 > ou ROS Paola · 06 51 53 82 29 · paola.ros@grand-sud.fr

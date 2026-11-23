@@ -66,7 +66,7 @@ Les entreprises partenaires de Grand Sud Formation nous confient leurs postes. C
 - Tu peux t'aider de l'IA en lui donnant l'offre et ton profil pour générer une première version, à retravailler ensuite avec tes propres mots.
 
 > **Ajoute ton contact école dans ta candidature**
-> CHARLOT Vincent · 07 67 91 23 19 · vincent.charlot@grand-sud.fr
+> FUNCK Molly · 07 67 91 23 19 · molly.funck@grand-sud.fr
 > ou ROS Paola · 06 51 53 82 29 · paola.ros@grand-sud.fr
 
 ## Ton LinkedIn est-il à jour ?

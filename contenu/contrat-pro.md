@@ -41,5 +41,5 @@ Pour les candidats de 30 ans et plus. Qui y a droit : voir [Contrat en alternanc
 - [ ] Attestations ou références professionnelles
 
 > **Besoin d'aide ?**
-> CHARLOT Vincent · 07 67 91 23 19 · vincent.charlot@grand-sud.fr
+> FUNCK Molly · 07 67 91 23 19 · molly.funck@grand-sud.fr
 > ou ROS Paola · 06 51 53 82 29 · paola.ros@grand-sud.fr
