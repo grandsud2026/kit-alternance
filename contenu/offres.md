@@ -14,10 +14,8 @@
 
 | Type de structure | Lieu | État |
 |---|---|---|
-| Hôtel | Cahors | Ouvert aux candidatures |
-| Restaurant | | Ouvert aux candidatures |
-| Hôtel | Brive-la-Gaillarde | Ouvert aux candidatures |
-| Hébergement touristique | Saint-Lary-Soulan | Ouvert aux candidatures |
+| Hôtel | Brive-la-Gaillarde | Candidatures en cours d'examen |
+| Hébergement touristique | Saint-Lary-Soulan | Candidatures en cours d'examen |
 
 > **Une offre correspond à tes compétences et le pôle entreprise ne t'a pas encore contacté ?**
 > FUNCK Molly · 07 67 91 23 19 · molly.funck@grand-sud.fr
